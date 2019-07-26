@@ -3,8 +3,8 @@ import { Segment, Label } from 'semantic-ui-react'
 
 
 export default function LocationCard (props) {
-  console.log('props', props)
   const { name, type, dimension, residents } = props.loc
+
   return (
     <Segment color='grey' piled>
       <h3>Name: {name}</h3>

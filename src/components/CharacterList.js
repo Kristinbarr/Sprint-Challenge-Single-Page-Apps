@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import Axios from 'axios'
-
 import CharacterCard from './CharacterCard'
 
 export default function CharacterList() {
@@ -12,15 +11,12 @@ export default function CharacterList() {
     //  Important: verify the 2nd `useEffect` parameter: the dependancies array!
     Axios.get('https://rickandmortyapi.com/api/character/')
       .then((res) => {
-        console.log('char res', res.data)
         setChars(res.data.results)
       })
       .catch((err) => {
         console.log('failed to load characters', err)
       })
   }, [])
-
-  console.log('chars', chars)
 
   return (
     <section className='character-list grid-view'>

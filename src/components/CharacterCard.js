@@ -9,12 +9,11 @@ const H5 = Styled.h5`
 
 export default function CharacterCard (props) {
 
-  console.log('card', props)
   const {image, name, species, location, origin, episodes } = props.char
 
   return (
     <div>
-      <Segment raised textAlign='justified'>
+      <Segment raised>
         <img src={image} />
         <h3>{name}</h3>
         <h5>{species}</h5>
