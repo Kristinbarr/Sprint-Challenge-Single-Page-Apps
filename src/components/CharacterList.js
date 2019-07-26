@@ -24,7 +24,6 @@ export default function CharacterList() {
 
   return (
     <section className='character-list grid-view'>
-      <h2>TODO: `array.map()` over your state here!</h2>
       {chars.map(char => (
         <CharacterCard char={char} key={char.id} />
       ))}
