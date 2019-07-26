@@ -2,23 +2,26 @@ import React from 'react'
 import { Segment, Label , Divider } from 'semantic-ui-react'
 import styled from 'styled-components'
 
-const seg = styled.div`
-  margin: 2rem;
+const Wrapper = styled.section`
+  padding: .5rem;
+  width: 30%;
+`
+const P = styled.p`
+  margin: 0;
 `
 
 export default function EpsiodeCard(props) {
-  console.log('episode', props)
   const { name, air_date, episode, characters } = props.episode
 
   return (
-    <div>
-      <Segment padded raised textAlign='justified'>
+    <Wrapper>
+      <Segment raised >
         <h3>Name: {name}</h3>
-        <Label attached='top right'>{episode}</Label>
+        <Label color='teal' align='right' ribbon>{episode}</Label>
         <Divider />
-        <p>Air Date: {air_date}</p>
-        <p>Character Count: {characters.length}</p>
+        <P><b>Air Date:</b> {air_date}</P>
+        <P><b>Character Count:</b> {characters.length}</P>
       </Segment>
-    </div>
+    </Wrapper>
   )
 }

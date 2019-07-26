@@ -9,7 +9,6 @@ export default function LocationsList() {
     Axios.get('https://rickandmortyapi.com/api/location/')
       .then((res) => {
         setLocations(res.data.results)
-        // console.log('locations', res.data.results)
       })
       .catch((err) => {
         console.log('failed to load locations', err)
